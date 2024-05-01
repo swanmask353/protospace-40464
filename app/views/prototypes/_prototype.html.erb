@@ -2,11 +2,11 @@
  <div class="card">
    <%= image_tag(prototype.image, class: 'card__img') %>
    <div class="card__body">
-     <%= link_to "プロトタイプのタイトル", prototype_path(prototype.id), class: :card__title%>
+     <%= link_to prototype.title, prototype_path(prototype.id), class: :card__title%>
      <p class="card__summary">
-       <%= "プロトタイプのキャッチコピー" %>
+       <%= prototype.catch_copy %>
     </p>
-    <%= link_to "by プロトタイプの投稿者名", root_path, class: :card__user %>
+    <%= link_to current_user.name, root_path, class: :card__user %>
   </div>
  </div>
 <% end %>
