@@ -11,7 +11,7 @@ class PrototypesController < ApplicationController
   end
 
   def create
-    @pcomme = current_user.prototypes.build(prototype_params)
+    @prototype = current_user.prototypes.build(prototype_params)
     if @prototype.save
       redirect_to '/'
     else
