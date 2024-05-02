@@ -6,11 +6,11 @@
         <%= "こんにちは" %>
         <%= link_to current_user.name , user_path(current_user), class: "greeting__link"%>さん
      </div> 
+   <% end %>
      <div class="card__wrapper">
        <% @prototypes.each do |prototype| %>
          <%= render partial: "prototype", locals: { prototype: prototype } %>
        <% end %>
      </div>
-    <% end %>
-  </div>
+ </div>
 </main>
