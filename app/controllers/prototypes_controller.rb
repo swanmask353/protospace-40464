@@ -21,7 +21,6 @@ class PrototypesController < ApplicationController
 
   def show
     @prototype = Prototype.find(params[:id])
-    @name = current_user.name
     @comment = Comment.new
     @comments = @prototype.comments.includes(:user)
   end
